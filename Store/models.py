@@ -19,6 +19,9 @@ class Product(models.Model):
     def get_url(self):
         return reverse('product_detail',args=[self.category.slug,self.slug,])
 
+    # def is_stock(self):
+    #     if self.stock == 0:
+    #         return
     def __str__(self):
         return self.product_name
 
